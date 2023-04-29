@@ -1,8 +1,8 @@
 import "./Products.scss";
 import Product from "./Product/Product";
-const Products = () => {
-    return <div className="products-container">
-        <div className="sec-heading">Section Heading</div>
+const Products = ({innerPage , headingText}) => {
+    return( <div className="products-container">
+        {!innerPage && <div className="sec-heading">{headingText}</div>}
         <div className="products">
             <Product/>
             <Product/>
@@ -13,7 +13,8 @@ const Products = () => {
             <Product/>
             <Product/>
         </div>
-    </div>;
+    </div>
+    );
 };
 
 export default Products;
